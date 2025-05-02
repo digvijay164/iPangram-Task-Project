@@ -1,30 +1,17 @@
-import React from 'react'
-import { SketchPicker } from 'react-color'
-import { useSnapshot } from 'valtio'
-import state from '../store'
-const ColorPicker = () => {
-  const snap = useSnapshot(state)
-  return (
-    <div className='absolute left-full ml-3'>
-      <SketchPicker
-      color={snap.color}
-      presetColors={[
-        '#D3D3D3',
-        '#000000',
-        '#FF0000',
-        '#00FF00',
-        '#0000FF',
-        '#FFFF00',
-        '#FF00FF',
-        '#00FFFF',
-        '#FFA500',
-        '#800080',
-      ]}
-      disableAlpha
-      onChange={(color) => state.color = color.hex}
-      />
-    </div>
-  )
-}
+import { HexColorPicker } from "react-colorful";
+import { useSnapshot } from "valtio";
 
-export default ColorPicker
+export default function ColorPicker(props) {
+  const snap = useSnapshot(props.state);
+  return (
+    <div
+      className={snap.current !== null ? "color-picker" : "color-picker hidden"}
+    >
+      <HexColorPicker
+        color={snap.colors[snap.current]}
+        onChange={(color) => props.updateColor(snap.current, color)}
+      />
+      <h1>{snap.current}</h1>
+    </div>
+  );
+}

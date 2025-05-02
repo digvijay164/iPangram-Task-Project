@@ -1,84 +1,27 @@
-# 3D T-Shirt Customizer
+# 3D Product Showcase
 
-An interactive 3D T-shirt customization tool built with React and Three.js that allows users to design custom t-shirts in real-time.
+This project was made with GLTF models, Threejs, 3-Fiber, 3-drei and React!
 
-## Features
+[Live Demo](https://product-showcase-3d.vercel.app/)
 
-- 3D T-shirt model visualization
-- Real-time color customization
-- Logo placement on t-shirt
-- Full texture application
+![Demo](/src/img/demo.png)
 
-## Tech Stack
+## About the Project
 
-- [React](https://reactjs.org/) - Frontend framework
-- [Vite](https://vitejs.dev/) - Build tool and development server
-- [Three.js](https://threejs.org/) - 3D graphics library
-- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) - React renderer for Three.js
-- [React Three Drei](https://github.com/pmndrs/drei) - Useful helpers for React Three Fiber
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [Valtio](https://valtio.pmnd.rs/) - State management
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Maath](https://github.com/pmndrs/maath) - Math helpers for Three.js
+An interactive 3D product visualizer with color picker built with Three.js, React Three Fiber, and React. It is a useful tool for e-commerce websites or other online platforms that sell physical products. It allows users to view a 3D model of the product from different angles and customize its appearance by changing the color and other visual aspects.
 
-## Getting Started
+To build this tool, I started by setting up a basic 3D scene using Three.js and React Three Fiber. This involves creating a renderer, camera, and scene, as well as adding lighting and any necessary materials or textures.
 
-1. Clone the repository:
+Next, I added the 3D models to the scene. Adjusted the scale and rigged the materials to be grouped appropriately with the mesh parts. The models can be created from scratch or imported from a 3D modeling software such as Blender.
 
-```sh
-git clone <repository-url>
-```
+To allow the user to customize the appearance of the product, I then implemented a color picker UI element that allows the user to select different parts of the mesh and edit the visual options. Then update the material of the product model based on the user's selection.
 
-2. Install dependencies:
+Finally, I added add any desired visual effects, as well as any necessary user interface elements, such as buttons to rotate the model or zoom in and out.
 
-```sh
-npm install
-```
+Overall, an interactive 3D product visualizer with color picker built with Three.js, React Three Fiber, and React can be a useful and engaging tool for online shopping platforms, allowing users to get a better sense of the appearance and dimensions of a product before purchasing.
 
-3. Run the development server:
+### `npm start`
 
-```sh
-npm run dev
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
-
-## Project Structure
-
-```
-src/
-├── assets/         # Static assets (images, icons)
-├── canvas/         # Three.js components and scene setup
-├── components/     # React components
-├── config/         # Configuration files
-├── pages/          # Page components
-├── store/          # State management
-└── App.jsx         # Root component
-```
-
-## Features in Detail
-
-### Color Picker
-
-- Choose custom colors for the t-shirt
-- Real-time color updates with smooth transitions
-
-### T-Shirt Customization
-
-- Upload logo images
-- Apply full textures
-- Position logos and textures precisely
-
-### 3D Controls
-
-- Rotate the t-shirt model
-- Zoom in/out
-- Pan across the scene
-
-## Build
-
-To build for production:
-
-```sh
-npm run build
-```
